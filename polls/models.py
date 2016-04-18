@@ -5,8 +5,9 @@ from django.utils import timezone
 
 
 class Question(models.Model):
+    slug_name = models.SlugField()
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    is_active = models.BooleanField()
 
     def __str__(self):
         return self.question_text
