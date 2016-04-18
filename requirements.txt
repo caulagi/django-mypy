@@ -1,2 +1,2 @@
-Django
-mypy-lang
+Django==1.9.5
+mypy-lang==0.3.1

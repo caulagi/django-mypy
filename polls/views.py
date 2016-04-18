@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 
@@ -13,11 +14,8 @@ class IndexView(ListView):
         return Question.objects.order_by('-id')[:5]
 
 
-def detail1(request, question_id):
+def detail(request, question_id: int) -> HttpResponse:
+    if not request.user.has_permission('read'):
+        return None
     question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
-
-
-def detail2(request, slug_name):
-    question = get_object_or_404(Question, pk=slug_name)
     return render(request, 'polls/detail.html', {'question': question})
