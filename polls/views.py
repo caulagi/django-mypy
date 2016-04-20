@@ -18,7 +18,7 @@ class IndexView(ListView):
 
 
 def detail(request: HttpRequest, question_id: int) -> HttpResponse:
-    if not request.user.has_permission('read'):
-        return None
     question = get_object_or_404(Question, pk=question_id)
+    if not question.is_active:
+        return 'invalid request'
     return render(request, 'polls/detail.html', {'question': question})
