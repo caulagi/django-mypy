@@ -8,7 +8,7 @@ A simple django project to show use of mypy
 from github
 
 ```
-$ pip install django
+$ pip install Django==1.9.5
 
 $ MYPYPATH=`pwd`/stubs mypy polls/views.py
 polls/views.py: note: In function "detail":
