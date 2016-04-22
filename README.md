@@ -1,6 +1,6 @@
 # django-mypy
 
-A simple django project to show use of mypy
+A simple django project to show use of [mypy](http://mypy-lang.org/)
 
 * Create virtualenv with python 3
 
