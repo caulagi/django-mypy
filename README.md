@@ -29,6 +29,11 @@ from github
     polls/views.py:23: error: Incompatible return value type: expected django.http.response.HttpResponse, got builtins.str
     ```
 
-#### Disclaimer
+## Creating more stubs
 
-**WIP**
+    ```
+    $ stubgen django.contrib
+    ```
+
+
+Disclaimer - **WIP**
