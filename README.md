@@ -24,7 +24,7 @@ from github
 * Run mypy on the example django project
 
     ```
-    $ MYPYPATH=`pwd`/stubs mypy polls/views.py
+    $ MYPYPATH=`pwd`/out mypy polls/views.py
     polls/views.py: note: In function "detail":
     polls/views.py:23: error: Incompatible return value type: expected django.http.response.HttpResponse, got builtins.str
     ```
